@@ -1,0 +1,31 @@
+@startuml
+abstract class Pizza{
+    + prepare(): void
+    + bake(): void
+    + cut(): void
+    + boc(): void
+}
+class BJCheesePizza{}
+class BJPepperPizza{}
+class LDCheesePizza{}
+class LDPepperPizza{}
+Pizza <|-- BJCheesePizza
+Pizza <|-- BJPepperPizza
+Pizza <|-- LDCheesePizza
+Pizza <|-- LDPepperPizza
+interface AbsFactory{
+    + createPizza(): Pizza
+}
+class BJFactory{}
+class LDFactory{}
+AbsFactory <|.. BJFactory
+AbsFactory <|.. LDFactory
+BJFactory .. BJCheesePizza
+BJFactory .. BJPepperPizza
+BJFactory .. Pizza
+LDFactory .. LDPepperPizza
+LDFactory .. LDCheesePizza
+LDFactory .. Pizza
+class OderPizza{}
+OderPizza o-- AbsFactory
+@enduml
