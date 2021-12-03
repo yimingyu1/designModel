@@ -1,0 +1,49 @@
+@startuml
+interface Controller
+class HttpController{
+    + doHttpHandler(): void
+}
+class SimpleController{
+    + doHttpHandler(): void
+}
+class AnnotationController{
+    + doHttpHandler(): void
+}
+
+Controller <|.. HttpController
+Controller <|.. SimpleController
+Controller <|.. AnnotationController
+
+interface HandlerAdapter{
+    + supports(handler: Object): boolean
+    + handle(handler: Object): void
+}
+
+class HttpHandlerAdapter{
+    + supports(handler: Object): boolean
+    + handle(handler: Object): void
+}
+
+class SimpleHandlerAdapter{
+    + supports(handler: Object): boolean
+    + handle(handler: Object): void
+}
+
+class AnnotationHandlerAdapter{
+    + supports(handler: Object): boolean
+    + handle(handler: Object): void
+}
+
+HandlerAdapter <|.. HttpHandlerAdapter
+HandlerAdapter <|.. SimpleHandlerAdapter
+HandlerAdapter <|.. AnnotationHandlerAdapter
+class DispatchServlet{
+    - handlerAdapters: List<HandlerAdapter>
+    + getHandler(controller: Controller)
+    + doDispatch(): void
+}
+
+DispatchServlet o.. HandlerAdapter
+DispatchServlet ..> Controller
+
+@enduml

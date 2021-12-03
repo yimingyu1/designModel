@@ -1,0 +1,12 @@
+@startuml
+class Voltage220V{
+    + output220V(): int
+}
+interface Voltage5V
+class ObjVoltageAdapter{
+    - voltage220V: Voltage220V
+}
+Voltage220V --o ObjVoltageAdapter
+Voltage5V <|.. ObjVoltageAdapter
+
+@enduml
