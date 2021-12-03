@@ -1,0 +1,29 @@
+@startuml
+
+abstract class AbstractHouse{
+    + abstract buildBasic(): void
+    + abstract buildWalls(): void
+    + abstract roofed(): void
+    + build(): void
+}
+
+class CommonHouse
+class HighBuilding
+
+AbstractHouse <|-- CommonHouse
+AbstractHouse <|-- HighBuilding
+class Director{
+    - builder: AbstractHouse
+    + construct(): void
+}
+
+Director "builder" o-- AbstractHouse
+note left of Director : builder.buildBasic(); \nbuilder.buildWalls();\nbuilder.roofed();
+class HouseProduct{
+    - basic: String
+    - wall: String
+    - roof: String
+}
+AbstractHouse *-- HouseProduct
+
+@enduml
