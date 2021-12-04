@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="022765c5-0c0a-4220-8175-e599ae229a3e" name="Default Changelist" comment="" />
+    <list default="true" id="022765c5-0c0a-4220-8175-e599ae229a3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/design-model.kotlin_module" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,9 +14,9 @@
       <list>
         <option value="UML Activity" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="UML Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,10 +52,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/factory/PizzaCase" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="project.propGUI" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -61,13 +64,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/factory/PizzaCase/pizza-case-001" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test (4)">
-    <configuration name="SheepTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prototype.SheepTest" />
-      <module name="design-model" />
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bridge.Client" />
+      <module name="designModel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="prototype.*" />
+          <option name="PATTERN" value="bridge.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Test (4)" />
         <item itemvalue="Application.Test (3)" />
         <item itemvalue="Application.Test (2)" />
         <item itemvalue="Application.Test (1)" />
-        <item itemvalue="Application.SheepTest" />
       </list>
     </recent_temporary>
   </component>
@@ -150,6 +153,7 @@
       <workItem from="1637592369294" duration="341000" />
       <workItem from="1637593869877" duration="673000" />
       <workItem from="1637594902933" duration="27192000" />
+      <workItem from="1638588237015" duration="2450000" />
     </task>
     <servers />
   </component>
@@ -157,26 +161,31 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="172" key="#com.intellij.ide.util.MemberChooser" timestamp="1638546426163">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="2151" y="206" key="#com.intellij.ide.util.MemberChooser" timestamp="1638590173256">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="533" y="172" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.25.2560.1415@0.0.1440.900" timestamp="1638546426163" />
-    <state width="1398" height="268" key="GridCell.Tab.0.bottom" timestamp="1638544409443">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="2151" y="206" key="#com.intellij.ide.util.MemberChooser/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1638590173256" />
+    <state width="1878" height="286" key="GridCell.Tab.0.bottom" timestamp="1638590515404">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.25.2560.1415@0.0.1440.900" timestamp="1638544409443" />
-    <state width="1398" height="268" key="GridCell.Tab.0.center" timestamp="1638544409442">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1878" height="286" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1638590515404" />
+    <state width="1878" height="286" key="GridCell.Tab.0.center" timestamp="1638590515402">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.center/0.0.1440.900/1440.25.2560.1415@0.0.1440.900" timestamp="1638544409442" />
-    <state width="1398" height="268" key="GridCell.Tab.0.left" timestamp="1638544409442">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1878" height="286" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1638590515402" />
+    <state width="1878" height="286" key="GridCell.Tab.0.left" timestamp="1638590515400">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.left/0.0.1440.900/1440.25.2560.1415@0.0.1440.900" timestamp="1638544409442" />
-    <state width="1398" height="268" key="GridCell.Tab.0.right" timestamp="1638544409443">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1878" height="286" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1638590515400" />
+    <state width="1878" height="286" key="GridCell.Tab.0.right" timestamp="1638590515403">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.right/0.0.1440.900/1440.25.2560.1415@0.0.1440.900" timestamp="1638544409443" />
+    <state width="1878" height="286" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1638590515403" />
     <state width="1398" height="356" key="GridCell.Tab.1.bottom" timestamp="1638007629800">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -193,11 +202,12 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="356" key="GridCell.Tab.1.right/0.0.1440.900/1440.25.2560.1415@0.0.1440.900" timestamp="1638007629799" />
-    <state x="197" y="115" key="SettingsEditor" timestamp="1638019967499">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="1703" y="138" key="SettingsEditor" timestamp="1638589878124">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="197" y="115" key="SettingsEditor/0.0.1440.900/1440.25.2560.1415@0.0.1440.900" timestamp="1638019967499" />
     <state x="2229" y="368" key="SettingsEditor/0.25.1440.875/1440.0.2560.1440@1440.0.2560.1440" timestamp="1637594884978" />
+    <state x="1703" y="138" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1638589878124" />
     <state width="527" height="445" key="SwitcherDM" timestamp="1638022118373">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

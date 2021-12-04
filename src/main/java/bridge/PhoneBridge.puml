@@ -1,0 +1,37 @@
+@startuml
+interface Brand{
+    + call(): void
+    + open(): void
+    + close(): void
+}
+
+class XiaoMi
+class Vivo
+
+
+abstract class Phone{
+    - brand: Brand
+    # call(): void
+    # open(): void
+    # close(): void
+}
+
+class FoldedPhone{
+    + call(): void
+    + open(): void
+    + close(): void
+}
+
+class UpRightPhone{
+    + call(): void
+    + open(): void
+    + close(): void
+}
+
+Phone <|-- FoldedPhone
+Phone <|-- UpRightPhone
+Phone o-- Brand
+Brand <|.. XiaoMi
+Brand <|.. Vivo
+
+@enduml
