@@ -1,0 +1,36 @@
+@startuml
+
+abstract class Organization{
+    - name: string
+    - desc: string
+    # add(organization: Organization): void
+    # remove(organization: Organization): void
+    + abstract  print(): void
+}
+
+class University{
+    - organizations: List<Organization>
+    + add(organization: Organization): void
+    + remove(organization: Organization): void
+    + print(): void
+}
+
+class College{
+    - organizations: List<Organization>
+    + add(organization: Organization): void
+    + remove(organization: Organization): void
+    + print(): void
+}
+
+class Department{
+    + print(): void
+}
+
+Organization <|-- University
+Organization <|-- College
+Organization <|-- Department
+University o-- College
+College o-- Department
+
+
+@enduml

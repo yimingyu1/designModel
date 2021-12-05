@@ -1,5 +1,7 @@
 package decorator;
 
+import java.io.InputStream;
+
 /**
  * ClassName: Demo
  * Description:
