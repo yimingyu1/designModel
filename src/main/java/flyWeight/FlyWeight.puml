@@ -1,0 +1,24 @@
+@startuml
+
+abstract class ConcreteWebSite{
+    + use(): void
+}
+
+class WebSite{
+    - type: String
+    + use(): void
+}
+
+class WebSiteFactory{
+    - ConcreteWebSiteList: List<ConcreteWebSiteList>
+    + getWebSite(type: String): WebSite
+    + getWebSiteSize(): int
+}
+class User{
+    - name: String
+}
+ConcreteWebSite <-- WebSite
+WebSiteFactory o-- ConcreteWebSite
+WebSite <-- User
+
+@enduml

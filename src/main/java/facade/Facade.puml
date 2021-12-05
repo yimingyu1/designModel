@@ -1,0 +1,22 @@
+@startuml
+
+class DVD{
+    + open(): void
+    + close(): void
+}
+class PopCron{
+    + open(): void
+    + close(): void
+}
+
+class Facade{
+    - dvd: DVD
+    - popCron: PopCron
+    + open(): void
+    + close(): void
+}
+
+Facade o-- DVD
+Facade o-- PopCron
+
+@enduml
