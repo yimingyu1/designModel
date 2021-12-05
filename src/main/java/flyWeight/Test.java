@@ -1,5 +1,7 @@
 package flyWeight;
 
+import sun.jvm.hotspot.jdi.IntegerValueImpl;
+
 /**
  * ClassName: Test
  * Description:
@@ -19,5 +21,15 @@ public class Test {
         WebSite webSite2 = webSiteFactory.getWebSite("娱乐");
         webSite1.use(new User("王五"));
         System.out.println(webSiteFactory.getWebSiteSize());
+        Integer x = Integer.valueOf(127);
+        Integer y = new Integer(127);
+        Integer z = Integer.valueOf(127);
+        Integer g = new Integer(127);
+        System.out.println(x.equals(y));
+        System.out.println(x == y);
+        System.out.println(x == z);
+        System.out.println(y == x);
+        System.out.println(y == g);
+
     }
 }
