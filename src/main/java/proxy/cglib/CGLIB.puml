@@ -1,0 +1,19 @@
+@startuml
+class Teacher{
+    + teach(): int
+}
+
+interface MethodInterceptor
+
+class ProxyFactory{
+    - teacher: Object
+    + ProxyFactory(teacher: Object)
+    + getProxyInstance(): Object
+    + intercept(arg0: Object, method: Method, args: Object[], arg3: MethodProxy):Object
+}
+
+MethodInterceptor <|.. ProxyFactory
+
+
+
+@enduml

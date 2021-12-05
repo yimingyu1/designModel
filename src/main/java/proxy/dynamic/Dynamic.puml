@@ -1,0 +1,16 @@
+@startuml
+interface ITeacher{
+    + teach(): void
+}
+
+class Teacher{
+    + teach(): void
+}
+class Dynamic{
+    + teacher: object
+    + getTeacher(): object
+}
+
+ITeacher <|.. Teacher
+
+@enduml

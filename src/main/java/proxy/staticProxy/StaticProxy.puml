@@ -1,0 +1,20 @@
+@startuml
+
+interface ITeacher{
+    + teach(): void
+}
+
+class Teacher{
+    + teach(): void
+}
+
+class TeacherProxy{
+    - teacher: ITeacher
+    + teach(): void
+}
+
+ITeacher <|.. Teacher
+ITeacher <|.. TeacherProxy
+TeacherProxy o.. teacher
+
+@enduml
