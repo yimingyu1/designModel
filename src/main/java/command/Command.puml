@@ -1,0 +1,47 @@
+@startuml
+interface Command{
+    + execute(): void
+    + undo(): void
+}
+
+class LightReceiver{
+    + onLight(): void
+    - offLight(): void
+}
+
+class LightOnCommand{
+    - lightReceiver: LightReceiver
+    + execute(): void
+    + undo(): void
+}
+
+class LightOffCommand{
+    - lightReceiver: LightReceiver
+    + execute(): void
+    + undo(): void
+}
+
+class NoCommand{
+    + execute(): void
+    + undo(): void
+}
+
+Command <|.. LightOnCommand
+Command <|.. LightOffCommand
+Command <|.. NoCommand
+LightOnCommand o-- LightReceiver
+LightOffCommand o-- LightReceiver
+
+class RemoteControl{
+    - onCommands: Command[]
+    - offCommands: Command[]
+    - noCommands: Command[]
+
+    + onButtonPushed(no: int): void
+    + offButtonPushed(no: int): void
+    + undoButtonPushed(no: int): void
+}
+
+RemoteControl o-- Command
+
+@enduml
