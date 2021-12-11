@@ -1,0 +1,40 @@
+@startuml
+abstract class Action{
+    + getVoteResult(person: Person): void
+}
+
+class SuccessAction{
+    + getVoteResult(person: Person): void
+}
+
+class FailAction{
+    + getVoteResult(person: Person): void
+}
+Action <|-- SuccessAction
+Action <|-- FailAction
+
+abstract class Person{
+    + accept(action: Action): void
+}
+
+class Man{
+    + accept(action: Action): void
+}
+class Woman{
+    + accept(action: Action): void
+}
+
+Person <|-- Man
+Person <|-- Woman
+Action -- Person
+
+class ObjectStructure{
+    - persons: List<Person>
+    + attach(person: Person): void
+    + detach(person: Person): void
+    + display(action: Action): void
+}
+
+ObjectStructure o-- Person
+
+@enduml
