@@ -1,0 +1,19 @@
+@startuml
+abstract class Colleague{
+    + setMessage(): void
+    + getMediator(): Mediator
+}
+abstract class Mediator{
+}
+class ConcreteMediator{
+    - colleagueMap: HashMap
+    + getMessage(): void
+}
+class Alarm
+class TV
+Colleague <|-- Alarm
+Colleague <|-- TV
+Mediator <|-- ConcreteMediator
+ConcreteMediator o-- Colleague
+Colleague -- Mediator
+@enduml
