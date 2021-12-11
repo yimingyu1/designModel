@@ -1,0 +1,29 @@
+@startuml
+
+interface Observer{
+    + update(): void
+}
+
+class CurrentObserver{
+    + update(): void
+}
+
+interface Subject{
+    + registerObserver(o: Observer): void
+    + removeObserver(o: Observer): void
+    + notifyObserver(): void
+}
+
+class WeatherData{
+    - observerList: List<Observer>
+    + registerObserver(o: Observer): void
+    + removeObserver(o: Observer): void
+    + notifyObserver(): void
+}
+
+Subject <|.. WeatherData
+Observer <|.. CurrentObserver
+WeatherData o-- Observer
+
+
+@enduml
