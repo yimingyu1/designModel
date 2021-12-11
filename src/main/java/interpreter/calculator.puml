@@ -1,0 +1,26 @@
+@startuml
+class Client
+class Calculator
+abstract class Expression{
+    + interpreter(): void
+}
+class VarExpression{
+    + interpreter(): void
+}
+class SymbolExpression{
+    + interpreter(): void
+}
+class AddExpression{
+    + interpreter(): void
+}
+class SubExpression{
+    + interpreter(): void
+}
+Client --> Calculator
+Calculator o-- Expression
+Expression <|-- VarExpression
+Expression <|-- SymbolExpression
+SymbolExpression <|-- AddExpression
+SymbolExpression <|-- SubExpression
+
+@enduml
