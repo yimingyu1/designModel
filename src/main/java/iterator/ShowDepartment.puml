@@ -1,0 +1,56 @@
+@startuml
+
+interface Iterator<E>{
+    + hasNext(): boolean
+    + next(): E
+    + remove(): void
+}
+
+class ComputerCollegeIterator{
+    - departments: Department[]
+    + hasNext(): boolean
+    + next(): E
+    + remove(): void
+}
+
+class InfoCollegeIterator{
+    - departments: List<Department>
+    + hasNext(): boolean
+    + next(): E
+    + remove(): void
+}
+
+class Department{
+    - name: String
+    - desc: String
+}
+
+Iterator <|.. ComputerCollegeIterator
+Iterator <|.. InfoCollegeIterator
+ComputerCollegeIterator o-- Department
+InfoCollegeIterator o-- Department
+interface College{
+    + createIterator(): Iterator
+}
+
+class ComputerCollage{
+    - departments: Department[]
+    + createIterator(): Iterator
+}
+
+class InfoCollege{
+    - departments: List<Department>
+    + createIterator(): Iterator
+}
+
+College <|.. ComputerCollage
+College <|.. InfoCollege
+ComputerCollage o-- Department
+InfoCollege o-- Department
+
+ComputerCollage ..> ComputerCollegeIterator
+InfoCollege ..> InfoCollegeIterator
+
+
+
+@enduml
