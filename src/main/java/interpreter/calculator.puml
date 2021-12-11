@@ -2,19 +2,23 @@
 class Client
 class Calculator
 abstract class Expression{
-    + interpreter(): void
+    + interpreter(map: Map<String, Integer>): void
 }
 class VarExpression{
-    + interpreter(): void
+    + interpreter(map: Map<String, Integer>): void
 }
 class SymbolExpression{
-    + interpreter(): void
+    + interpreter(map: Map<String, Integer>): void
 }
 class AddExpression{
-    + interpreter(): void
+    - left: Expression
+    - right: Expression
+    + interpreter(map: Map<String, Integer>): void
 }
 class SubExpression{
-    + interpreter(): void
+    - left: Expression
+    + right: Expression
+    + interpreter(map: Map<String, Integer>): void
 }
 Client --> Calculator
 Calculator o-- Expression
@@ -22,5 +26,6 @@ Expression <|-- VarExpression
 Expression <|-- SymbolExpression
 SymbolExpression <|-- AddExpression
 SymbolExpression <|-- SubExpression
-
+AddExpression o-- Expression
+SubExpression o-- Expression
 @enduml

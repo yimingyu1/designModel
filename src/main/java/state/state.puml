@@ -1,0 +1,21 @@
+@startuml
+abstract class State{
+    + deduceMoney(): void
+    + raffle(): boolean
+    + dispensePrize(): void
+}
+
+class NoRaffleState
+class CanRaffleState
+class DispenseState
+class DispenseOutState
+State <|-- NoRaffleState
+State <|-- CanRaffleState
+State <|-- DispenseState
+State <|-- DispenseOutState
+class Activity
+Activity -- NoRaffleState
+Activity -- CanRaffleState
+Activity -- DispenseState
+Activity -- DispenseOutState
+@enduml
