@@ -13,8 +13,8 @@
         <option value="UML Activity" />
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="UML Class" />
         <option value="Class" />
+        <option value="UML Class" />
       </list>
     </option>
   </component>
@@ -155,6 +155,7 @@
       <workItem from="1637593869877" duration="673000" />
       <workItem from="1637594902933" duration="27192000" />
       <workItem from="1638588237015" duration="2450000" />
+      <workItem from="1639023800829" duration="2253000" />
     </task>
     <servers />
   </component>
